@@ -2,5 +2,36 @@
 {% load static %}
 {% block content %}
 <h3>Acceuil</h3>
-<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<div class="row">
+    <div class="col-lg-4">
+        <a href="#">
+            <img class="thumbnail" src="{% static 'travels/img/placeholder.png' %}">
+        </a>
+        <div class="box-element product">
+            <h6><strong>Voyage 1</strong></h6>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <a href="#">
+            <img class="thumbnail" src="{% static 'travels/img/placeholder.png' %}">
+        </a>
+        <div class="box-element product">
+            <h6><strong>Voyage 2</strong></h6>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <a href="#">
+            <img class="thumbnail" src="{% static 'travels/img/placeholder.png' %}">
+        </a>
+
+
+        <div class="box-element product">
+            <h6><strong>Voyage 3</strong></h6>
+        </div>
+    </div>
+</div>
 {% endblock content %}
