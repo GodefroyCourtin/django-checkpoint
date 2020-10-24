@@ -4,5 +4,5 @@ from django.contrib import admin
 from .models import *
 
 admin.site.register(Voyage)
-admin.site.register(Voyagestep)
-admin.site.register(Linkstep) 
+admin.site.register(Step)
+admin.site.register(Linkstep)

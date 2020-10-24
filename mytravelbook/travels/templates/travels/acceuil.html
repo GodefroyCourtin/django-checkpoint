@@ -2,36 +2,34 @@
 {% load static %}
 {% block content %}
 <h3>Acceuil</h3>
+
 <div class="row">
+    {% for voyage in voyages %}
     <div class="col-lg-4">
-        <a href="#">
-            <img class="thumbnail" src="{% static 'travels/img/placeholder.png' %}">
+        <a href="{% url 'travel' %}">
+            <img class="thumbnail" src="{{ voyage.linkphoto }}">
         </a>
-        <div class="box-element product">
-            <h6><strong>Voyage 1</strong></h6>
+        <div class=" box-element product">
+            <h6><strong> {{ voyage.title }}</strong></h6>
+            <p>From {{ voyage.start_date }} to {{ voyage.end_date }}</p>
+            {% for step in voyage.step_set.all %}
+            <div>
+                <h6><strong>{{step.city}} {{step.date}}</strong></h6>
+                <p>{{step.summary}}</p>
 
+
+                {% if step.linkstep_set %}
+                <ul>
+                    {% for link in step.linkstep_set.all %}
+                    <li>Best restaurant in <a href="{{ link.restaurant }}">{{ link.title_step }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            {% endfor %}
         </div>
     </div>
 
-    <div class="col-lg-4">
-        <a href="#">
-            <img class="thumbnail" src="{% static 'travels/img/placeholder.png' %}">
-        </a>
-        <div class="box-element product">
-            <h6><strong>Voyage 2</strong></h6>
-
-        </div>
-    </div>
-
-    <div class="col-lg-4">
-        <a href="#">
-            <img class="thumbnail" src="{% static 'travels/img/placeholder.png' %}">
-        </a>
-
-
-        <div class="box-element product">
-            <h6><strong>Voyage 3</strong></h6>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock content %}
