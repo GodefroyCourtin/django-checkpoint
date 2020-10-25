@@ -1,10 +1,11 @@
 {% extends 'travels/main.html' %}
 {% load static %}
 {% block content %}
-<h3>Acceuil</h3>
+
+<h3 class="titre-acc">My three last travels</h3>
 
 <div class="row">
-    {% for voyage in voyages %}
+    {% for voyage in voyages|slice:":3" %}
     <div class="col-lg-4">
         <a href="{% url 'travel' %}">
             <img class="thumbnail" src="{{ voyage.linkphoto }}">
@@ -21,7 +22,7 @@
                 {% if step.linkstep_set %}
                 <ul>
                     {% for link in step.linkstep_set.all %}
-                    <li>Best restaurant in <a href="{{ link.restaurant }}">{{ link.title_step }}</a></li>
+                    <li>Best <a href="{{ link.linkrestaurant }}">restaurant</a> in {{ link.title_step }}</li>
                     {% endfor %}
                 </ul>
                 {% endif %}
