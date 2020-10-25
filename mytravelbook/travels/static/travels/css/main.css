@@ -9,6 +9,9 @@ h1,h2,h3,h4,h5,h6{
 .titre-acc {
 	padding-top: 20px;
 }
+.navbar-brand, .nav-link  {
+	font-size: 25px;
+}
 
 .box-element{
 	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
@@ -25,6 +28,7 @@ h1,h2,h3,h4,h5,h6{
     -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
     box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
 }
+
 
 .product{
 	border-radius: 0 0 4px 4px;
