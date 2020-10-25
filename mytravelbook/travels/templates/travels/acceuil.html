@@ -20,7 +20,7 @@
 
 
                 {% if step.linkstep_set %}
-                <ul>
+                <ul class="no-bullets">
                     {% for link in step.linkstep_set.all %}
                     <li>Best <a href="{{ link.linkrestaurant }}">restaurant</a> in {{ link.title_step }}</li>
                     {% endfor %}
@@ -30,7 +30,6 @@
             {% endfor %}
         </div>
     </div>
-
     {% endfor %}
 </div>
 {% endblock content %}
