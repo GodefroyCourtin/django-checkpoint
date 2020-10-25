@@ -31,17 +31,25 @@
                 </li>
 
             </ul>
-            <div class="form-inline my-2 my-lg-0">
 
-
-                <a href="https://www.linkedin.com/in/godefroy-courtin/?originalSubdomain=fr">
-                    <img id="cart-icon" src="{% static 'travels/img/linkdin_logo.png' %}">
-                </a>
-
-
-            </div>
         </div>
     </nav>
+
+    <div class="banner">
+        <h2 id="text">Travels</h2>
+        <div class="clouds">
+            <img src="{% static 'travels/img/cloud1.png' %}" style="--i:1;" alt="">
+            <img src="{% static 'travels/img/cloud2.png' %}" style="--i:2;" alt="">
+            <img src="{% static 'travels/img/cloud3.png' %}" style="--i:3;" alt="">
+            <img src="{% static 'travels/img/cloud4.png' %}" style="--i:4;" alt="">
+            <img src="{% static 'travels/img/cloud5.png' %}" style="--i:5;" alt="">
+            <img src="{% static 'travels/img/cloud1.png' %}" style="--i:10;" alt="">
+            <img src="{% static 'travels/img/cloud2.png' %}" style="--i:9;" alt="">
+            <img src="{% static 'travels/img/cloud3.png' %}" style="--i:8;" alt="">
+            <img src="{% static 'travels/img/cloud4.png' %}" style="--i:7;" alt="">
+            <img src="{% static 'travels/img/cloud5.png' %}" style="--i:6;" alt="">
+        </div>
+    </div>
 
     <div class="container">
 
@@ -50,6 +58,26 @@
 
         {% endblock content %}
     </div>
+
+    <footer class="page-footer font-small blue">
+
+
+
+        <div class="offset-10 col-lg-2">
+            <a href="https://www.linkedin.com/in/godefroy-courtin/?originalSubdomain=fr">
+                <img id="cart-icon" src="{% static 'travels/img/linkdin_logo.png' %}">
+            </a>
+
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        let text = document.getElementById('text');
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            text.style.marginBottom = value * 2 + 'px';
+        })
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
