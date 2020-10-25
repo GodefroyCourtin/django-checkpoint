@@ -6,6 +6,10 @@ h1,h2,h3,h4,h5,h6{
 	color:hsl(0, 0%, 30%);
 }
 
+h6 {
+	padding: 10px;
+}
+
 .titre-acc {
 	padding-top: 20px;
 }

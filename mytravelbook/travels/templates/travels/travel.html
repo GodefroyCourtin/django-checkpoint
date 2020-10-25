@@ -5,11 +5,11 @@
 <div class="row">
     {% for voyage in voyages %}
     <div class="col-lg-4">
+        <h6><strong> {{ voyage.title }}</strong></h6>
         <a href="{{voyage.linkphoto}}">
             <img class="thumbnail" src="{{ voyage.linkphoto }}">
         </a>
         <div class=" box-element product">
-            <h6><strong> {{ voyage.title }}</strong></h6>
             <p>From {{ voyage.start_date }} to {{ voyage.end_date }}</p>
             {% for step in voyage.step_set.all %}
             <div>
