@@ -134,7 +134,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url("https://www.myposter.fr/magazin/wp-content/uploads/2016/07/lulovas_23_7_2018_15_52_33_918.jpg");
+	background: url("../img/bg.jpg");
 }
 
 .banner #text {
