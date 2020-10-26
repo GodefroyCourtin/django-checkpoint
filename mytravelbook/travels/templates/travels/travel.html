@@ -6,8 +6,8 @@
     {% for voyage in voyages %}
     <div class="col-lg-4">
         <h6><strong> {{ voyage.title }}</strong></h6>
-        <a href="{{voyage.linkphoto}}">
-            <img class="thumbnail" src="{{ voyage.linkphoto }}">
+        <a href="{{voyage.linkphoto.url}}">
+            <img class="thumbnail" src="{{ voyage.linkphoto.url }}">
         </a>
         <div class=" box-element product">
             <p>From {{ voyage.start_date }} to {{ voyage.end_date }}</p>

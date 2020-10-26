@@ -5,7 +5,7 @@ class Voyage(models.Model):
     title = models.CharField(max_length=200)
     start_date = models.DateField(null=True)
     end_date = models.DateField(null=True)
-    linkphoto = models.URLField()
+    linkphoto = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.title
